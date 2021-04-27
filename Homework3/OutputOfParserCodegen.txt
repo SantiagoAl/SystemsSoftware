@@ -1,0 +1,39 @@
+Lexeme List:
+28 2 z 9 3 5 18 29 2 x 17 2 y 18 21 2 x 20 2 y 4 3 56 18 22 19
+
+Displaying input instructions: 
+Line  OP   R   L   M
+0    jmp   0   0   1
+1    inc   0   0   5
+2    lit   1   0  56
+3    add   0   0   1
+4    sto   0   0   3
+5    sio   0   0   3
+
+Initial Values	 pc: 0  bp: 999  sp: 1000
+Registers: 00000000
+Stack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+0   jmp  0  0  1	 pc: 1  bp: 999  sp: 1000
+Registers:0 0 0 0 0 0 0 0 
+Stack: 
+
+1   inc  0  0  5	 pc: 2  bp: 999  sp: 995
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 
+
+2   lit  1  0  56	 pc: 3  bp: 999  sp: 995
+Registers:0 56 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 
+
+3   add  0  0  1	 pc: 4  bp: 999  sp: 995
+Registers:56 56 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 
+
+4   sto  0  0  3	 pc: 5  bp: 999  sp: 995
+Registers:56 56 0 0 0 0 0 0 
+Stack: 0 0 0 56 0 
+
+5   sio  0  0  3	 pc: 6  bp: 999  sp: 995
+Registers:56 56 0 0 0 0 0 0 
+Stack: 0 0 0 56 0 

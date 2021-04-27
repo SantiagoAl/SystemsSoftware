@@ -1,0 +1,292 @@
+// The following is the input to this program
+var x, y, z, v, w;
+procedure a;
+	var x, y, u, v;
+	procedure b;
+		var y, z, v;
+		procedure c;
+			var y, z;
+			begin
+			z := 1;
+			x := y + z + w
+			end;
+		begin
+		y := x + u + w;
+		call c
+		end;
+	begin
+	z := 2;
+	u := z + w;
+	call b
+	end;
+begin
+x := 1; y := 2; z := 3; v := 4; w := 5;
+x := v + w;
+write z;
+call a;
+end.
+
+// The following is the output of the program, including the generated instructions and the
+// stack
+
+
+No errors, program is syntactically correct
+
+Displaying input instructions: 
+Line  OP   R   L   M
+0    jmp   0   0  31
+1    jmp   0   0  22
+2    jmp   0   0  13
+3    inc   0   0   5
+4    lit   0   0   1
+5    sto   0   3   4
+6    lod   0   0   3
+7    lod   1   0   4
+8    add   0   0   1
+9    lod   1   3   7
+10   add   0   0   1
+11   sto   0   3   4
+12   rtn   0   0   0
+13   inc   0   0   6
+14   lod   0   1   3
+15   lod   1   1   5
+16   add   0   0   1
+17   lod   1   2   7
+18   add   0   0   1
+19   sto   0   2   5
+20   cal   0  -1   3
+21   rtn   0   0   0
+22   inc   0   0   7
+23   lit   0   0   2
+24   sto   0   1   6
+25   lod   0   1   5
+26   lod   1   1   7
+27   add   0   0   1
+28   sto   0   1   6
+29   cal   0  -1   2
+30   rtn   0   0   0
+31   inc   0   0   8
+32   lit   0   0   1
+33   sto   0   0   7
+34   lit   0   0   2
+35   sto   0   0   7
+36   lit   0   0   3
+37   sto   0   0   7
+38   lit   0   0   4
+39   sto   0   0   7
+40   lit   0   0   5
+41   sto   0   0   7
+42   lod   0   0   6
+43   lod   1   0   7
+44   add   0   0   1
+45   sto   0   0   7
+46   lod   0   0   5
+47   sio   0   0   1
+48   cal   0  -1   1
+49   sio   0   0   3
+
+Initial Values	 pc: 0  bp: 999  sp: 1000
+Registers: 00000000
+Stack 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+0   jmp  0  0  31	 pc: 31  bp: 999  sp: 1000
+Registers:0 0 0 0 0 0 0 0 
+Stack: 
+
+31  inc  0  0  8	 pc: 32  bp: 999  sp: 992
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 0 
+
+32  lit  0  0  1	 pc: 33  bp: 999  sp: 992
+Registers:1 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 0 
+
+33  sto  0  0  7	 pc: 34  bp: 999  sp: 992
+Registers:1 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 1 
+
+34  lit  0  0  2	 pc: 35  bp: 999  sp: 992
+Registers:2 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 1 
+
+35  sto  0  0  7	 pc: 36  bp: 999  sp: 992
+Registers:2 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 2 
+
+36  lit  0  0  3	 pc: 37  bp: 999  sp: 992
+Registers:3 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 2 
+
+37  sto  0  0  7	 pc: 38  bp: 999  sp: 992
+Registers:3 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 3 
+
+38  lit  0  0  4	 pc: 39  bp: 999  sp: 992
+Registers:4 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 3 
+
+39  sto  0  0  7	 pc: 40  bp: 999  sp: 992
+Registers:4 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 4 
+
+40  lit  0  0  5	 pc: 41  bp: 999  sp: 992
+Registers:5 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 4 
+
+41  sto  0  0  7	 pc: 42  bp: 999  sp: 992
+Registers:5 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+42  lod  0  0  6	 pc: 43  bp: 999  sp: 992
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+43  lod  1  0  7	 pc: 44  bp: 999  sp: 992
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+44  add  0  0  1	 pc: 45  bp: 999  sp: 992
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+45  sto  0  0  7	 pc: 46  bp: 999  sp: 992
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+46  lod  0  0  5	 pc: 47  bp: 999  sp: 992
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+The value is: 0
+
+47  sio  0  0  1	 pc: 48  bp: 999  sp: 992
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+48  cal  0  -1  1	 pc: 1  bp: 991  sp: 992
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+1   jmp  0  0  22	 pc: 22  bp: 991  sp: 992
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 
+
+22  inc  0  0  7	 pc: 23  bp: 991  sp: 985
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 | 999 999 49 0 0 0 0 
+
+23  lit  0  0  2	 pc: 24  bp: 991  sp: 985
+Registers:2 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 5 | 999 999 49 0 0 0 0 
+
+24  sto  0  1  6	 pc: 25  bp: 991  sp: 985
+Registers:2 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 2 5 | 999 999 49 0 0 0 0 
+
+25  lod  0  1  5	 pc: 26  bp: 991  sp: 985
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 2 5 | 999 999 49 0 0 0 0 
+
+26  lod  1  1  7	 pc: 27  bp: 991  sp: 985
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 2 5 | 999 999 49 0 0 0 0 
+
+27  add  0  0  1	 pc: 28  bp: 991  sp: 985
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 2 5 | 999 999 49 0 0 0 0 
+
+28  sto  0  1  6	 pc: 29  bp: 991  sp: 985
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 
+
+29  cal  0  -1  2	 pc: 2  bp: 984  sp: 985
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 
+
+2   jmp  0  0  13	 pc: 13  bp: 984  sp: 985
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 
+
+13  inc  0  0  6	 pc: 14  bp: 984  sp: 979
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+14  lod  0  1  3	 pc: 15  bp: 984  sp: 979
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+15  lod  1  1  5	 pc: 16  bp: 984  sp: 979
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+16  add  0  0  1	 pc: 17  bp: 984  sp: 979
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+17  lod  1  2  7	 pc: 18  bp: 984  sp: 979
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+18  add  0  0  1	 pc: 19  bp: 984  sp: 979
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+19  sto  0  2  5	 pc: 20  bp: 984  sp: 979
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+20  cal  0  -1  3	 pc: 3  bp: 978  sp: 979
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+3   inc  0  0  5	 pc: 4  bp: 978  sp: 974
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+4   lit  0  0  1	 pc: 5  bp: 978  sp: 974
+Registers:1 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+5   sto  0  3  4	 pc: 6  bp: 978  sp: 974
+Registers:1 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+6   lod  0  0  3	 pc: 7  bp: 978  sp: 974
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+7   lod  1  0  4	 pc: 8  bp: 978  sp: 974
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+8   add  0  0  1	 pc: 9  bp: 978  sp: 974
+Registers:0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+9   lod  1  3  7	 pc: 10  bp: 978  sp: 974
+Registers:0 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+10  add  0  0  1	 pc: 11  bp: 978  sp: 974
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+11  sto  0  3  4	 pc: 12  bp: 978  sp: 974
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 5 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 | 984 984 21 0 0 
+
+12  rtn  0  0  0	 pc: 21  bp: 984  sp: 979
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 5 5 5 5 | 999 999 49 0 0 0 0 | 991 991 30 0 0 0 
+
+21  rtn  0  0  0	 pc: 30  bp: 991  sp: 985
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 5 5 5 5 | 999 999 49 0 0 0 0 
+
+30  rtn  0  0  0	 pc: 49  bp: 999  sp: 992
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 5 5 5 5 
+
+49  sio  0  0  3	 pc: 50  bp: 999  sp: 992
+Registers:5 5 0 0 0 0 0 0 
+Stack: 0 0 0 0 5 5 5 5 
